@@ -5,17 +5,21 @@
 }
 
 body{
-    background-image: url("../img/fondo.png");
-    background-color: rgb(0, 48, 73);
-    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    background-image:url("../img/fondo.png");
+    background-color:rgb(0,48,73);
+    background-repeat:repeat;
+    font-family:Arial,sans-serif;
 }
 
 .contenedor{
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: rgba(0, 48, 73, 0.92);
-    border-radius: 2rem;
+    width:90%;
+    max-width:1200px;
+    margin:2rem 0;
+    padding:2rem;
+    background-color:rgba(0,48,73,.92);
+    border-radius:2rem;
 }
 
 header{
@@ -48,6 +52,10 @@ p, address, li{
 
 section{
     margin-bottom: 3rem;
+}
+
+article{
+    margin-bottom:2rem;
 }
 
 .navbar{
@@ -83,30 +91,15 @@ a:active{
     color: rgb(0, 48, 73);
 }
 
-span{
-    color: orange;
-    font-weight: bold;
-}
-
-.uno{
-    color: lightblue;
-}
-
 img{
     width: 100%;
-    max-width: 40rem;
     height: auto;
-    display: block;
-    margin: 0 auto;
     border-radius: 1rem;
 }
 
 iframe{
     width: 100%;
-    max-width: 50rem;
-    height: 28rem;
-    display: block;
-    margin: 0 auto;
+    height: 18rem;
     border: none;
     border-radius: 1rem;
 }
@@ -124,4 +117,35 @@ hr{
 
 footer{
     text-align: center;
+}
+
+.inicio{
+    display:flex;
+    gap:2rem;
+    align-items:flex-start;
+}
+
+.inicio section{
+    flex:1;
+}
+
+.tecnologia{
+    display:flex;
+    gap:2rem;
+    align-items:flex-start;
+}
+
+.izquierda{
+    flex:1;
+}
+
+.derecha{
+    flex:2;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.izquierda img{
+    margin-top:2rem;
 }
