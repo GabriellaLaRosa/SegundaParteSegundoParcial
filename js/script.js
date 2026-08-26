@@ -1,14 +1,13 @@
 //Galería de arte
 
 // Captura de los elementos del HTML en variables
-let boton = document.querySelector("#mostrar");
 let diseño = document.querySelector("#diseño");
 let galeria = document.querySelector("#contenedor");
 
 diseño.style.display = 'none';
 
 
-boton.addEventListener('click', function(e){
+window.addEventListener('load', function(e){
 
     // Inserta el código HTML de la galería dentro del contenedor
     galeria.innerHTML = `
@@ -38,8 +37,6 @@ boton.addEventListener('click', function(e){
     </div>
     `;
 
-    boton.style.display = "none";
-
     diseño.style.display = 'block';
 });
 
@@ -52,7 +49,7 @@ diseño.addEventListener('click', function(){
     for(let i = 0; i < obras.length; i++){
 
         // Cambia el color de fondo de cada contenedor
-        obras[i].style.background = 'purple';
+        obras[i].style.background = 'rgba(2, 93, 116, 0.5)';
     }
 
     diseño.style.display = 'none';
@@ -62,21 +59,23 @@ diseño.addEventListener('click', function(){
 
 let botonDato = document.querySelector("#dato");
 let respuesta = document.querySelector("#resultado");
+respuesta.style.display = "none";
 let datosCuriosos = [
-    "una formación universitaria en química física.",
-    "más de 70 países donde se han exhibido sus obras.",
-    "instalaciones que responden a la participación del público.",
-    "un fuerte interés por la relación entre arte y tecnología.",
-    "obras que utilizan sensores biométricos y datos en tiempo real.",
-    "el premio Golden Nica del festival Ars Electronica.",
-    "intervenciones artísticas realizadas en edificios y espacios públicos.",
-    "proyectos que exploran temas como la identidad, la memoria y la vigilancia.",
-    "obras en las que la luz y el sonido cambian según la interacción de los visitantes.",
-    "una trayectoria reconocida internacionalmente dentro del arte contemporáneo."
+    "Rafael Lozano-Hemmer es un artista mexicano-canadiense especializado en instalaciones interactivas en espacios públicos.",
+    "Su obra combina tecnología avanzada como sensores biométricos, robótica y datos en tiempo real.",
+    "En su proyecto Vectorial Elevation, ciudadanos controlaban reflectores gigantes a través de internet.",
+    "Pulse Room es una instalación que traduce los latidos cardíacos de los visitantes en pulsos de luz.",
+    "Su trabajo explora la relación entre el cuerpo humano, la tecnología y la vigilancia.",
+    "Ha expuesto sus obras en más de 70 países alrededor del mundo.",
+    "Lozano-Hemmer estudió ingeniería antes de dedicarse al arte, lo que influye en su enfoque tecnológico.",
+    "Sus instalaciones suelen involucrar la participación activa del público para activar la obra.",
+    "Fue ganador del prestigioso premio Ars Electronica por su innovador uso de tecnología en arte.",
+    "Utiliza la luz como lenguaje poético para explorar temas de identidad, memoria y presencia."
 ];
 let numRandom = 0;
 
 botonDato.addEventListener('click', function(){
+    respuesta.style.display = "block";
     numRandom = Math.floor(Math.random() * 10);
-    respuesta.innerText = `Rafael Lozano-Hemmer tiene ${datosCuriosos[numRandom]}`;
+    respuesta.innerText = `${datosCuriosos[numRandom]}`;
 });

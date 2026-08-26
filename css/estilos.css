@@ -91,6 +91,25 @@ a:active{
     color: rgb(0, 48, 73);
 }
 
+.linkFooter:link{ 
+    color:rgb(115, 92, 230); 
+}
+
+.linkFooter:visited{
+    color: rgb(179, 168, 220);
+}
+
+.linkFooter:hover{
+    background-color: rgb(63, 0, 209);
+    color: rgb(234, 226, 183);
+}
+
+.linkFooter:active{
+    background-color: rgb(234, 200, 183);
+    color: rgb(26, 0, 73);
+}
+
+
 img{
     width: 100%;
     height: auto;
@@ -150,17 +169,36 @@ footer{
     margin-top:2rem;
 }
 
+#contenedorTrayectoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#imagenTrayectoria{
+    width: 400px;
+    height: 450px;
+    border-radius:1rem;
+}
+
 .obra{
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     text-align:center;
-    gap:.7rem;
-    width:220px;
+    gap: 2rem;
+    width:400px;
+    height: 400px;
     padding:1rem;
     background:rgba(255,255,255,.05);
     border-radius:1rem;
+}
+
+.obra img{
+    width: 350px;
+    height: 250px;
 }
 
 .obra label{
